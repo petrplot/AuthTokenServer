@@ -6,19 +6,19 @@
 1. скачать репозиторий
 2. открыть терминал
 3. выполнить команду `npm init`
-4. установить mySql глобально на ваш пк
+4. установить `mySql` глобально на ваш пк
 5. создать базу данных `testtoken` 
 6. создать `.env` файл и добавить в него следующие данные:
 
    `
-    PORT= предпочитаемый порт для работы сервера 
-    DB_NAME='testtoken'
-    DB_USER='ваше имя пользователя от mySql'
-    DB_PASS='ваш пароль от mySql'
-    DB_HOST='localhost'
+    `PORT= предпочитаемый порт для работы сервера` 
+    `DB_NAME='testtoken'`
+    `DB_USER='ваше имя пользователя от mySql'`
+    `DB_PASS='ваш пароль от mySql'`
+    `DB_HOST='localhost'`
 
-    SECRET_KEY_ACC= 'ваш ключ для access token'
-    SECRET_KEY_REF='ваш ключ для refresh token'
+    `SECRET_KEY_ACC= 'ваш ключ для access token'`
+    `SECRET_KEY_REF='ваш ключ для refresh token'`
 `
 7. выполнить команду `npm start`
 
