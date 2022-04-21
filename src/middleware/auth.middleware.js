@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import ApiError from '../Error/ApiError.js';
+import ApiError from '../error/ApiError.js';
 
 export default function (req, res, next) {
   try {

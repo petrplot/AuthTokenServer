@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 import cookie from 'cookie';
 import jwt from 'jsonwebtoken';
 import Token from '../models/Token.js';
-import ApiError from '../Error/ApiError.js';
+import ApiError from '../error/ApiError.js';
 import validator from '../utils/validator.js';
 import generateJwt from '../utils/generateJwt.js';
 import UserDto from '../utils/userDto.js';
