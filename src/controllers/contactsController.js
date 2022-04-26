@@ -15,6 +15,9 @@ class ContactsController {
     try {
       const { userId } = req.query;
       const contacts = await Contact.findAll({ where: { userId } });
+      if (!contacts) {
+        return res.json([]);
+      }
       return res.json(contacts);
     } catch (e) {
       next(e);
@@ -25,7 +28,8 @@ class ContactsController {
     try {
       const { id } = req.params;
       const contact = await Contact.destroy({ where: { id } });
-      return res.json(contact);
+      console.log(contact);
+      return res.json('');
     } catch (e) {
       next(e);
     }
@@ -35,7 +39,8 @@ class ContactsController {
     try {
       const { name, phone } = req.body;
       const { id } = req.params;
-      const contact = await Contact.update({ name, phone }, { where: { id } });
+      await Contact.update({ name, phone }, { where: { id } });
+      const contact = await Contact.findOne({ where: { id } });
       return res.json(contact);
     } catch (e) {
       next(e);
